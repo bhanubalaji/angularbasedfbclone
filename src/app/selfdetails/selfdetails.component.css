@@ -1,0 +1,34 @@
+.userdata img{
+  margin-left: 6%;
+ }
+ .selfimgtag{
+
+  margin-left: 24%;
+  margin-top: 2%;
+
+ }
+.uploadimg{
+  margin-left: 50%;
+}
+.uploadimg form input{
+  border-radius: 30px;
+  border: 2px solid white;
+  color:white;
+  background-color: white
+}
+.uploadimg form  button{
+  color: black;
+  background-color: blueviolet;
+}
+.buttonofimg{
+  margin-left:40% ;
+}
+.buttonofimg button{
+  margin-bottom: 10%;
+
+  width: 30%;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  height: 30%;
+}

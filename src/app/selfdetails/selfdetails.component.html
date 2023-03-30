@@ -1,0 +1,39 @@
+
+<!-- <button (click)="selfimg()">my profile pic</button> -->
+
+<div class=" selfimgtag">
+  <img [src]="selfimagesrc" id=" Myimage" alt="click on my profile pic button for your profile pic"  height="400vh" width=" 80%" >
+  <!-- <img [src]="item.myselfphotoidsrc. changingThisBreaksApplicationSecurity" id=" Myimage" alt="err"  height="30px" width=" 30px" > -->
+
+</div>
+
+
+
+<div class="uploadimg">
+<form>
+  <input  #singleinput type="file" (change)="onFileSelected($event)" >
+  <button (click)="onUpload()">save profile pic</button>
+
+</form>
+<div class="postmessage">
+  <p>{{postdatamessage}}</p>
+</div>
+</div>
+
+
+<br>
+<br><br><hr><br>
+
+<div class="buttonofimg">
+<button (click)="myputosbutton()">my photos</button>
+<!-- <button  (click)="myfriendsdata()">my friends</button> -->
+</div>
+
+
+<div class="userdata">
+  <div *ngIf="myphotodis">
+  <div *ngFor="let item of imagesrc">
+  <img [src]="item" id=" Myimage" alt="err" width="50%" height="50%">
+</div>
+</div>
+</div>

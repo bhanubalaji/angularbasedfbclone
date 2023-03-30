@@ -1,0 +1,19 @@
+
+
+<div  *ngFor="let item of friendsdataall; let i = index"  >
+  <div *ngIf="!(addfriendid==item._id)">
+   <div  *ngIf="(!(friendsdataalls.includes(item._id)))">
+     <div [ngStyle]="{'display':(showElement[i])?'block':'none'}">
+  <div>{{item.name}}</div>
+  <p>{{cancelinformation}}</p>
+  <button (click)="hideElement(i)"  *ngIf="((totaladdfriendsselfids.includes(item._id)))" (click)="conformfriend(item._id)">conform</button>
+  <button (click)="hideElement(i)" *ngIf="(!(totaladdfriendsselfids.includes(item._id)))"  (click)="addfriend(item._id)">Add Friend</button>
+<button name="id" (click)="cancelsubmit(item._id)">cancel</button>
+ </div>
+</div>
+</div>
+</div>
+
+
+
+

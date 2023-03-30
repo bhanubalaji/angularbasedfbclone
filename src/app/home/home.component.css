@@ -1,0 +1,47 @@
+
+
+
+.background-image {
+  background-image : url('../image/facstat.jpg') ;
+  background-size: cover;
+  height: 100%;
+  padding: 60px;
+
+}
+.container {
+  border: 3px solid yellow;
+  border-radius: 20px;
+  display: block;
+  margin: 2% 40%;
+  padding: 5% 10%;
+  width: 10vh;
+
+}
+
+.button {
+  color: rgb(197, 19, 19);
+  background-color:rgb(226, 226, 34);
+  border: none;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline block;
+  margin: 4px -40px;
+
+  cursor: pointer;
+  font-size: 20px;
+}
+.it{
+  margin: 4px -40px;
+  padding: 15px 46px;
+}
+.main{
+   text-align: center;
+  display:  inline block;
+  border-radius: 3px;
+  font-size: 30px;
+
+
+
+
+}

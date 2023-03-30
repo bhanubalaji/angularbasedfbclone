@@ -1,0 +1,48 @@
+<div class="background-image ">
+<div class="container">
+  <!-- <div class="row">
+      <div class="col-md-3"> -->
+
+      <!-- </div> -->
+      <div class="main">
+          <form   #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value) ">
+              <h2>SignUp Form</h2><br>
+              <input type="text" ngModel  class="box" id="name"  name="name" placeholder="Name" required />
+              <br>
+              <!-- <span style="color: red;" *ngIf="name && name.invalid && name.touched" >this input is not valid</span> -->
+
+               <br>
+              <input type="email" ngModel class="box" id="email"  name="gmail" placeholder="Email" required />
+              <br>
+              <!-- <span style="color: red;" *ngIf="gmail && gmail.invalid && gmail.touched" >this input is not valid</span> -->
+              <br>
+               <input type="text" ngModel  class="box"  id="phno" name="phno" placeholder="Mobile" required />
+              <br>
+              <!-- <span style="color: red;" *ngIf="phno && phno.invalid && phno.touched" >this input is not valid</span> -->
+              <br>
+            <div class="FormGroup">
+              <!-- <input [type]="changetype ?'password':'text'" ngModel  class="box at"   id="ppassword" name="password" placeholder="********" required />
+              <input type="checkbox" (click)="viewpass()" >Show Password <br> -->
+              <input  ngModel  class="box at"   id="ppassword" name="password" placeholder="********" required />
+
+
+            </div>
+               <!-- <span class="eyeicon">  <i class="fa fa-eye"></i>
+
+                <i class="fa-solid fa-eye"></i>
+              </span> -->
+              <br>
+              <!-- <span style="color: red;" *ngIf="password && password.invalid && password.touched" >this input is not valid</span> <br> -->
+
+
+              <input type="submit"  value="Submit"   id="submit"  />
+
+              <!-- <button  (click)="goToPage('login')"></button> -->
+
+              <br>
+
+          </form>
+      </div>
+
+</div>
+</div>

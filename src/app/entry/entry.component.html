@@ -1,0 +1,136 @@
+<body>
+  <nav>
+    <div class="navleft">
+      <p> <strong>FACE BOOK</strong> </p>
+      <input type="text" placeholder="search.......?">
+      <button>search</button>
+    </div>
+
+    <div class="navmid">
+      <li><a  routerLink="/entry">Home</a></li>
+      <li><a  routerLink="/entry/friends">make friends</a></li>
+      <!-- <li><a href="">
+          <div (click)="logout()">logout</div>
+        </a></li>
+      <li><a routerLink="/entry/selfdetails">selfdatails</a></li> -->
+
+    </div>
+
+    <div class="navright">
+      <li><a href="">
+        <div (click)="logout()">logout</div>
+      </a></li>
+    <li><a routerLink="/entry/selfdetails">My Details</a></li>
+    </div>
+  </nav>
+
+  <div class="maincontainer">
+
+    <div class="sidebarright">
+      <div class="sideright">
+        <h3>FACEBOOK MENU</h3>
+  <li id="name"><a routerLink="/entry/selfdetails">  <img [src]="selfimagesrc" id=" Myimage" alt="err"  height="30px" width=" 30px" >      </a> </li>
+        <li><a routerLink="/entry/friends">Friends</a></li>
+        <li><a href="">Watch</a></li>
+        <li><a routerLink="/entry/info" >info</a></li>
+        <li><a routerLink="/entry/help">help</a></li>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="midcontainer">
+      <div class="writepostcontainer">
+        <div class="userprofile">
+          <img [src]="safeimageurl"  alt="err"  height="30px" width=" 30px" >
+          <!-- {{selfimagesrc}}
+          <p>
+          {{safeimageurl}}
+
+          </p> -->
+          <p>Bhanu Balaji</p>
+        </div>
+
+        <div class="postinputcontainr">
+          <textarea rows="3" placeholder="whats on your mind?"  [(ngModel)]="textdata" ></textarea>
+          {{textdata}}
+          <div class="postdatalinks">
+            <a href="entry/image-upload">upload images</a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div *ngFor="let item of myotherdata ; let it=index">
+        <div  *ngIf="it > 0">
+          <div *ngFor="let items of item.myphotoid ; let i=index">
+            <div  *ngIf="i > 0" >
+            <div class="writepostcontainer">
+              <div class="userprofile">
+         <img [src]="selfimagesothersrc[it-1]" id=" Myimage" alt="err"  height="30px" width=" 30px" >
+
+                <p>{{item.name}}</p>
+              </div>
+              <div class="userdata">
+                <img [src]="imagesrc[it-1][i]" id=" Myimage" alt="" width="90%" height="50%">
+              </div>
+              <hr>
+              <div class="likesharebox">
+                  <button (click)="like(items)"> likes</button>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="leftsidebar">
+      <div class="sidebarlilink">
+        <h3>Events</h3>
+        <a href="#">see All</a>
+      </div>
+
+
+      <div class="event">
+        <div class="leftevent">
+          <h4>18</h4>
+          <span>march</span>
+        </div>
+        <div class="rightevent">
+          <h4>social media</h4>
+          <p>wilson tech park</p>
+          <a href="#">more info</a>
+        </div>
+      </div>
+      <div class="event">
+        <div class="leftevent">
+          <h4>1</h4>
+          <span>nov</span>
+        </div>
+        <div class="rightevent">
+          <h4>marketing</h4>
+          <p> tech park</p>
+          <a href="#">more info</a>
+        </div>
+      </div>
+       <!-- <div class="sidebarlilink">
+        <h3>Advertisements</h3>
+        <img src="../image/image2.jpg" alt="errr" class="sideadd">
+        <a href="">close</a>
+      </div> -->
+    </div>
+  </div>
+
+
+
+
+
+</body>

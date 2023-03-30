@@ -1,0 +1,7 @@
+<form>
+  <input #singleinput type="file" (change)="onFileSelected($event)" >
+  <button (click)="onUpload()">post</button>
+</form>
+<div class="postmessage">
+  <p>{{postdatamessage}}</p>
+</div>
