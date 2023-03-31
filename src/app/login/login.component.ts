@@ -12,7 +12,7 @@ import { LoginService } from '../services/login.service';
 })
 export class LoginComponent {
 loginerrmessage:string=""
-isLoginError = new EventEmitter<boolean>(false)
+isLoginError :boolean= false
 isSellerLogIn = new BehaviorSubject<boolean>(false)
 logindatastore:any
 logindata:any
@@ -23,7 +23,7 @@ constructor(private http: HttpClient,private router:Router,private login:LoginSe
   onSubmit(datas:logindata){
       this.login.logindata(datas).subscribe((res:any)=>{
         console.warn(res)
-        if(res){
+        if(res.userdata){
       console.warn("logged in")
       localStorage.setItem("login", JSON.stringify(res))
       this.router.navigate(['entry'])
@@ -33,19 +33,23 @@ constructor(private http: HttpClient,private router:Router,private login:LoginSe
       if(this.logindata.userdata._id){
         this.router.navigate(['entry'])
       }
+    }
       else{
         console.warn("fail to login")
-        this.isLoginError.emit(true)
+        this.isLoginError=true
+        if(this.isLoginError){
+          console.log(this.isLoginError)
+          this.loginerrmessage="log in data is invalid"
+         }
        }
-     }
-
-
 
 
       });
-     if(this.isLoginError){
-      this.loginerrmessage="log in data is invalid"
-     }
+
+
+
+
+
   }
 
 
