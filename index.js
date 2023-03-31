@@ -611,7 +611,7 @@ if (userdata.password===passwords) {
    }
     }
   catch(error){
-     res.status(400).send("invalid details")
+     res.send({results:false})
   }
 })
 
